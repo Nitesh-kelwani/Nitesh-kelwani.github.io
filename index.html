@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitesh Kelwani | ML Engineer</title>
+    <style>
+        /* --- CSS STYLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0c10; /* Dark background for contrast */
+            color: #c5c6c7;
+            overflow-x: hidden;
+        }
+
+        /* The canvas for the neural network background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Puts it behind everything */
+            background-color: #0b0c10; 
+        }
+
+        /* Main Content Container */
+        .container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: #66fcf1; /* Cyan accent color */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #45a29e;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #fff;
+            margin: 60px 0 30px 0;
+            border-bottom: 2px solid #45a29e;
+            display: inline-block;
+        }
+
+        /* Project Cards Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: rgba(31, 40, 51, 0.8); /* Semi-transparent */
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #45a29e;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            background: rgba(31, 40, 51, 1);
+        }
+
+        .project-card h3 {
+            color: #66fcf1;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            background-color: #45a29e;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #66fcf1;
+            color: #0b0c10;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <header>
+            <h1>Nitesh Kelwani</h1>
+            <h2>Machine Learning Enthusiast | Python Developer</h2>
+            <p style="margin-top: 20px; font-size: 1.1rem;">
+                Building intelligent systems with Data Science and Deep Learning.
+            </p>
+        </header>
+
+        <section id="projects">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Car Damage Detection</h3>
+                    <p>A computer vision app using Streamlit that detects damage on vehicles with 86% accuracy.</p>
+                    <a href="#" class="btn">View Code</a>
+                    <a href="#" class="btn">Live Demo</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Forest Fire Prediction</h3>
+                    <p>Machine Learning model deployed on AWS & Azure to predict fire risks based on environmental data.</p>
+                    <a href="#" class="btn">View Code</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Real-Time Emotion Analysis</h3>
+                    <p>NLP project using NLTK and Scikit-learn to analyze emotions from text inputs in real-time.</p>
+                    <a href="#" class="btn">View Code</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Connect</h2>
+            <div style="text-align: center;">
+                <a href="https://linkedin.com/in/your-profile" class="btn">LinkedIn</a>
+                <a href="https://github.com/nitesh-kelwani" class="btn">GitHub</a>
+                <a href="mailto:your-email@example.com" class="btn">Email Me</a>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#66fcf1" /* Cyan dots */
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false
+                },
+                "size": {
+                    "value": 3,
+                    "random": true
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#66fcf1", /* Cyan lines */
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 4,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab" /* This makes lines attach to your mouse */
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
